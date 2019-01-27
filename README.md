@@ -1,4 +1,4 @@
-# PhotoAPI
+# PhotosAPI
 
 RESTful API that downloads photos from FlickrAPI and then exposes them at respective endpoints.
 
@@ -22,12 +22,13 @@ RESTful API that downloads photos from FlickrAPI and then exposes them at respec
 
    `pip install -r requirements.txt`
 
-6. Set up the database (first change to the UrlCrawler directory)
+6. Set up the database
 
    `python manage.py makemigrations`
 
-
    `python manage.py migrate`
+
+   `python manage.py createsuperuser`
 
 7. Run the server (on localhost:8000)
 
@@ -47,25 +48,25 @@ RESTful API that downloads photos from FlickrAPI and then exposes them at respec
 
 ### API reference - 
 
-**End point** - api/v1/groups/
+1. **End point** - api/v1/groups/
 
 **Methods allowed** - GET
 
 Returns all the groups available in the database.
 
-**End point** - api/v1/group/&ltgid&gt/
+2. **End point** - api/v1/group/&ltgid&gt/
 
 **Methods allowed** - GET
 
 Returns all the photo ids that are part of the provided group id.
 
-**End point** - api/v1/photo/&ltpid&gt/
+3. **End point** - api/v1/photo/&ltpid&gt/
 
 **Methods allowed** - GET
 
 Returns the data related to a particular photo id.
 
-**End point** - api/v1/login/ and api/v1/logout/ 
+4. **End point** - api/v1/login/ and api/v1/logout/ 
 
 **Methods allowed** - POST
 
