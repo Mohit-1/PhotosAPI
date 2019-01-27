@@ -9,6 +9,7 @@ from rest_framework import generics
 # Create your views here.
 class ListGroups(generics.ListAPIView):
     permission_classes = (IsAuthenticated, )
+    
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
